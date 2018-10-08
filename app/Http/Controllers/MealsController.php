@@ -62,7 +62,7 @@ class MealsController extends Controller
         $Meal = Meal::create($request->except(['img']));
         if ($request->hasFile('img')) {
             $img = $request->file('img');
-            $path = $request->img->store('images');
+            $path = $request->img->store('images', ['disk' => 'public']);
             $Meal->img = $path;
             $Meal->save();
         }

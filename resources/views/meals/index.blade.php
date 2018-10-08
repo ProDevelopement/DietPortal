@@ -30,7 +30,7 @@
                         @foreach($meals as $meal)
                         <div class="card card-meal" style="width: 18rem;">
                             <span class="badge badge-pill badge-primary notify-badge">{{ $meal->type }}</span>
-                            <img class="card-img-top" src="{{ url('/' . $meal->img) }}" alt="Card image cap" data-toggle="tooltip" data-placement="top" >
+                            <img class="card-img-top" src="{{ url('/storage/' . $meal->img) }}" alt="Card image cap" data-toggle="tooltip" data-placement="top" >
                             <div class="card-body">
                             <h5 class="card-title">{{ $meal->title }}</h5>
                             <p class="card-text">{{ substr(strip_tags($meal->preparation), 0, 120) }}...</p>
