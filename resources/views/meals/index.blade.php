@@ -119,23 +119,45 @@
     </div>
   </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+
+<!-- Modal View Meal -->
+<div class="modal fade" id="viewMeal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-5">
+                <div class="row mealTitle">VEGGIE EGG WHITE OMELETTE</div>
+                <div class="row mealImage">
+                    <img src="https://via.placeholder.com/300x200" alt="">
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <div class="row mealIngredients">
+                    <ul>
+                        <li>4 egg whites</li>
+                        <li>1 cup fresh organic spinach</li>
+                        <li>½ red bell pepper, chopped</li>
+                        <li>1 tablespoon goat cheese</li>
+                        <li>Cooking spray</li>
+                    </ul>
+                </div>
+                <div class="row mealPreparation">
+                    <ul>
+                        <li>Heat a medium-sized pan and spray with cooking spray over medium-high heat</li>
+                        <li>Add spinach and bell peppers, saute for 3 minutes</li>
+                        <li>Pour egg whites into pan on top of the sauteed veggies, sprinkle goat cheese and cook until firm for an additional 4 minutes</li>
+                        <li>Flip and fold omelette, side onto a place and enjoy with your favorite hot sauce</li>
+                    </ul>
+                </div>
+                <div class="row mealNutrients"></div>
+            </div>
+            </div>
+        </div>
+        {{-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Add Meal</button>
+        </div> --}}
     </div>
   </div>
 </div>
@@ -145,6 +167,7 @@
     <script>
         $( document ).ready(function() {
             console.log( "document loaded" );
+            window.api_token = '{{ Auth::user()->api_token }}'
             $( "#filterBy" ).change(function() {
                 let filterby = $('#filterBy').val();
                 if(filterby == 'All'){
@@ -155,8 +178,8 @@
                 }
             });
             $('.editMeal').click(function(){
+                $("#viewMeal").modal()
                 let mealToEdit = $(this).val();
-                alert(mealToEdit);
             });
         });
         $( window ).on( "load", function() {

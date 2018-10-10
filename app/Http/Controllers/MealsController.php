@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Meal;
+use App\Ingredient;
 
 class MealsController extends Controller
 {
@@ -38,9 +39,25 @@ class MealsController extends Controller
         return view('meals.index', $args);
     }
     public function getSingleMeal($id){
-        return response()->json($id);
+        $meal = Meal::find($id);
+        $meal->ingredients;
+        return response()->json($meal);
     }
 
+    /**
+     * Add Ingridiants
+     */
+    public function addIngredient(Request $request){
+        $ingredient = new Ingredient;
+        $ingredient->meal_id = $request->meal_id;
+        $ingredient->ingredient = $request->ingredient;
+        $ingredient->save();
+        
+        $meal = Meal::find($request->meal_id);
+        $meal->ingredients;
+        return response()->json($meal);
+    }
+    
     /**
      * Show the form for creating a new resource.
      *

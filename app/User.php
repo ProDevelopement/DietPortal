@@ -16,9 +16,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'api_token',
     ];
 
+    public function rollApiKey(){
+        do{
+            $this->api_token = str_random(60);
+        }while($this->where('api_token', $this->api_token)->exists());
+        $this->save();
+    }
     /**
      * The attributes that should be hidden for arrays.
      *
