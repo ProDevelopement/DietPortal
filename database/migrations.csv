@@ -1,0 +1,7 @@
+id,"migration",batch
+1,"2014_10_12_000000_create_users_table",1
+2,"2014_10_12_100000_create_password_resets_table",1
+3,"2018_10_08_102604_create_meals_table",1
+4,"2018_10_08_103554_create_ingredients_table",1
+5,"2018_10_08_104050_create_weakly_diet_plans_table",1
+6,"2018_10_08_104651_create_daily_plan_meals_table",1
