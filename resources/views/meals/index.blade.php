@@ -122,36 +122,36 @@
 
 <!-- Modal View Meal -->
 <div class="modal fade" id="viewMeal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog  modal-lg" role="document">
     <div class="modal-content">
         <div class="modal-body">
             <div class="row">
-                <div class="col-xs-5">
-                <div class="row mealTitle">VEGGIE EGG WHITE OMELETTE</div>
-                <div class="row mealImage">
-                    <img src="https://via.placeholder.com/300x200" alt="">
+                <div class="col-sm-5">
+                    <div class="row mealTitle">VEGGIE EGG WHITE OMELETTE</div>
+                    <div class="row mealImage">
+                        <img src="/storage/images/Cjkfqk2mDbywGgbBhQEag4nwgQZiLbmueRCUvIoj.png" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-7">
-                <div class="row mealIngredients">
-                    <ul>
-                        <li>4 egg whites</li>
-                        <li>1 cup fresh organic spinach</li>
-                        <li>½ red bell pepper, chopped</li>
-                        <li>1 tablespoon goat cheese</li>
-                        <li>Cooking spray</li>
-                    </ul>
+                <div class="col-sm-7">
+                    <div class="row mealIngredients">
+                        <ul>
+                            <li>4 egg whites</li>
+                            <li>1 cup fresh organic spinach</li>
+                            <li>½ red bell pepper, chopped</li>
+                            <li>1 tablespoon goat cheese</li>
+                            <li>Cooking spray</li>
+                        </ul>
+                    </div>
+                    <div class="row mealPreparation">
+                        <ul class="site-list circle">
+                            <li>Heat a medium-sized pan and spray with cooking spray over medium-high heat</li>
+                            <li>Add spinach and bell peppers, saute for 3 minutes</li>
+                            <li>Pour egg whites into pan on top of the sauteed veggies, sprinkle goat cheese and cook until firm for an additional 4 minutes</li>
+                            <li>Flip and fold omelette, side onto a place and enjoy with your favorite hot sauce</li>
+                        </ul>
+                    </div>
+                    <div class="row mealNutrients"></div>
                 </div>
-                <div class="row mealPreparation">
-                    <ul>
-                        <li>Heat a medium-sized pan and spray with cooking spray over medium-high heat</li>
-                        <li>Add spinach and bell peppers, saute for 3 minutes</li>
-                        <li>Pour egg whites into pan on top of the sauteed veggies, sprinkle goat cheese and cook until firm for an additional 4 minutes</li>
-                        <li>Flip and fold omelette, side onto a place and enjoy with your favorite hot sauce</li>
-                    </ul>
-                </div>
-                <div class="row mealNutrients"></div>
-            </div>
             </div>
         </div>
         {{-- <div class="modal-footer">

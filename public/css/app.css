@@ -10492,3 +10492,42 @@ a.text-dark:focus {
   font-size: 20px;
 }
 
+.modal-lg {
+  max-width: 800px;
+}
+
+.mealImage {
+  position: relative;
+  text-align: center;
+}
+
+.mealImage img {
+  position: absolute;
+  width: 90%;
+  margin: 20px;
+}
+
+.mealTitle {
+  font-family: inherit;
+  font-size: 1.8em;
+  text-align: center;
+  line-height: 1.2;
+  color: #4e789a;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+ul,
+ol {
+  list-style: none;
+  list-style-type: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  line-height: 1.85714286em;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
